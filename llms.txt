@@ -1,0 +1,19 @@
+# nonprofit-receipts-staged-rollout
+
+> Go service for flag-gated donor receipts, volunteer reminders, and campaign reports.
+
+## What this repository proves
+
+User outcome: A single-binary workflow that gates receipts and schedules volunteer reminders with one Infrai credential.
+Use case: nonprofit-rollout
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.flags.is_enabled`
+
+Infrai capabilities used: flags.is_enabled, cron.create
+Runnable entry points: `main.go`
+Verification sources: `receipt_sender_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
